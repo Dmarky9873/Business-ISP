@@ -15,8 +15,17 @@ h2 {
   color: whitesmoke;
 }
 
+h4 {
+  color: whitesmoke;
+}
+
 p {
   color: whitesmoke;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
 }
 
 .navbar-brand-img {
