@@ -1,0 +1,24 @@
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(226, 18, 33),
+    rgb(34, 31, 31)
+  );
+}
+
+h1 {
+  color: whitesmoke;
+}
+
+h2 {
+  color: whitesmoke;
+}
+
+p {
+  color: whitesmoke;
+}
+
+.navbar-brand-img {
+  width: min(37vw, 100px);
+}
