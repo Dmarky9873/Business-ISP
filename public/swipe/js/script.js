@@ -9,7 +9,12 @@ const urls = [
     './swipe/accounts/ryder-jackson/ryder-jackson.jpg',
     './swipe/accounts/ryan-michaels/ryan-michaels.jpg',
     './swipe/accounts/lewis-johnson/lewis-johnson.jpg',
-    './swipe/accounts/sam-hibberts/sam-hibberts.jpg'
+    './swipe/accounts/sam-hibberts/sam-hibberts.jpg',
+    './swipe/accounts/daniel-markusson/daniel-markusson.jpg',
+    './swipe/accounts/fraser-bryant/fraser-bryant.jpg',
+    './swipe/accounts/mikel-campbell/mikel-campbell.jpg',
+    './swipe/accounts/liam-fu/liam-fu.jpg',
+    './swipe/accounts/warsame-houssein/warsame-houssein.jpg',
 ];
 
 // variables
@@ -18,6 +23,7 @@ let compCalc = document.getElementById("compatability-calculator")
 let compCalcCounter = 0;
 
 // functions
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -26,9 +32,9 @@ function updateCompatabilityCalculator() {
 
     if (compCalcCounter == urls.length - 1) {
 
-        compCalc.innerHTML = "Netflix-compatability %: Calculating..."
+        compCalc.innerHTML = "Netflix-compatability: Calculating..."
         setTimeout(function() {
-            compCalc.innerHTML = `Netflix-compatability %: ${getRandomInt(100)}%`;
+            compCalc.innerHTML = `Netflix-compatability: ${getRandomInt(100)}%`;
         }, getRandomInt(3) * 1000);
     } else {
         compCalcCounter++;
