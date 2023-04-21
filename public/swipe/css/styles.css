@@ -1,0 +1,16 @@
+#movie-table > tbody > tr > td {
+  background-color: rgba(34, 31, 31, 0) !important;
+}
+
+#movie-table > thead > tr > th {
+  background-color: rgba(34, 31, 31, 0) !important;
+}
+
+.table {
+  border: none;
+}
+
+.table th,
+.table td {
+  border: none;
+}

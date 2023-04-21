@@ -21,6 +21,10 @@ const urls = [
 let cardCount = 0;
 let compCalc = document.getElementById("compatability-calculator")
 let compCalcCounter = 0;
+var favMovie
+var leastFavMovie
+var favMovieShower
+var leastFavMovieShower
 
 // functions
 
@@ -32,17 +36,40 @@ function updateCompatabilityCalculator() {
 
     if (compCalcCounter == urls.length - 1) {
 
+        for (let i = 0; i < 3; i++) {
+            favMovieShower = document.getElementById(`fav-movie-${i}`)
+            leastFavMovieShower = document.getElementById(`least-fav-movie-${i}`)
+
+            favMovieShower.innerHTML = "Loading..."
+            leastFavMovieShower.innerHTML = "Loading..."
+        }
+
         compCalc.innerHTML = "Netflix-compatability: Calculating..."
-        setTimeout(function() {
+        setTimeout(function () {
             compCalc.innerHTML = `Netflix-compatability: ${getRandomInt(100)}%`;
+            updateFavMovies()
         }, getRandomInt(3) * 1000);
     } else {
         compCalcCounter++;
     }
 }
 
+function getRandomMovie() {
+    return movies[getRandomInt(movies.length)]
+}
+
 function updateFavMovies() {
-    console.log(movies[getRandomInt(movies.length)])
+
+    for (let i = 0; i < 3; i++) {
+        favMovie = getRandomMovie()
+        leastFavMovie = getRandomMovie()
+
+        favMovieShower = document.getElementById(`fav-movie-${i}`)
+        leastFavMovieShower = document.getElementById(`least-fav-movie-${i}`)
+
+        favMovieShower.innerHTML = favMovie
+        leastFavMovieShower.innerHTML = leastFavMovie
+    }
 }
 
 function appendNewCard() {
