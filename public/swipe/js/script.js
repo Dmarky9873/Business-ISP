@@ -41,6 +41,10 @@ function updateCompatabilityCalculator() {
     }
 }
 
+function updateFavMovies() {
+    console.log(movies[getRandomInt(movies.length)])
+}
+
 function appendNewCard() {
     const card = new Card({
         imageUrl: urls[cardCount % urls.length],
@@ -63,6 +67,7 @@ function appendNewCard() {
     });
 
     updateCompatabilityCalculator()
+    updateFavMovies()
 }
 
 // first 5 cards
